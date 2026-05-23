@@ -14,10 +14,6 @@ ICOs are a blockchain-based fundraising mechanism in which companies raise capit
 by selling digital tokens to investors. This structure creates a high-stakes environment for both entrepreneurs and investors, underscoring the importance of understanding why ICOs succeed or fail, and the ability to predict a project’s outcome.
 
 ---
-## Data
-The dataset (`LUBS5990M_courseworkData_202526.csv`) is included in this 
-repository.
----
 
 ## Analytical Pipeline (`analysis.R`)
 
