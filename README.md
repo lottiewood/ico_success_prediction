@@ -7,9 +7,6 @@ Using a dataset of 5,828 real-world ICO campaigns sourced from IcoBench, the
 analysis covers the full data science pipeline: from raw data cleaning through 
 to model evaluation.
 
-The project was completed as assessed coursework for LUBS5990M: Machine Learning 
-in Practice at the University of Leeds (2025/26).
-
 ---
 
 ## Business Context
