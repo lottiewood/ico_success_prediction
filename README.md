@@ -75,14 +75,13 @@ Final evaluation on a held-out test set (80/20 split, stratified by outcome).
 | Model | Algorithm | Key Hyperparameter Tuned |
 |---|---|---|
 | Decision Tree | C5.0 with adaptive boosting | Number of boosting trials (1–20) |
-| Random Forest | `randomForest` ensemble | Number of trees (50–500) |
+| Random Forest | `randomForest` | Number of trees (50–500) |
 | SVM | `kernlab::ksvm` | Cost C (0.01–10) × kernel (linear, RBF, polynomial) |
 | KNN | `class::knn` with z-score normalisation | Number of neighbours k (1–121) |
 
 ### 4. Evaluation
 - Accuracy, Precision, Recall, F1 score on held-out test set
 - ROC curves and AUC scores for all four models
-- Results summary table exported to LaTeX via `xtable`
 
 ---
 
@@ -103,10 +102,4 @@ preferable for binary go/no-go decisions.
 **Strongest predictors** (Random Forest variable importance): expert `rating`, 
 `btc_price` at launch, campaign `duration`, and `teamsize`.
 
----
 
-## References
-
-- Huang, W., Vismara, S. and Wei, X. (2021). Confidence and capital raising. 
-  *Journal of Corporate Finance*, p.101900.
-- Momtaz, P.P. (2020). Initial Coin Offerings. *PLoS ONE*, 15(5): e0233018.
