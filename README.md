@@ -72,8 +72,8 @@ Final evaluation on a held-out test set (80/20 split, stratified by outcome).
 |---|---|---|
 | Decision Tree | C5.0 with adaptive boosting | Number of boosting trials (1–20) |
 | Random Forest | `randomForest` | Number of trees (50–500) |
-| SVM | `kernlab::ksvm` | Cost C (0.01–10) × kernel (linear, RBF, polynomial) |
-| KNN | `class::knn` with z-score normalisation | Number of neighbours k (1–121) |
+| SVM | `ksvm` | Cost C (0.01–10) × kernel (linear, RBF, polynomial) |
+| KNN | `knn` | Number of neighbours k (1–121) |
 
 ### 4. Evaluation
 - Accuracy, Precision, Recall, F1 score on held-out test set
