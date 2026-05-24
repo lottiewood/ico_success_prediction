@@ -15,7 +15,7 @@ by selling digital tokens to investors. This structure creates a high-stakes env
 
 ---
 
-## Analytical Pipeline (`analysis.R`)
+## Analytical Pipeline 
 
 The script is structured into four clearly commented sections:
 
@@ -50,16 +50,16 @@ The script is structured into four clearly commented sections:
 
 **2.3 Missing Value Handling**
 - Columns with >70% missingness dropped (`sold_tokens`, `pre_ico_price_usd`)
-- Listwise deletion for `duration`, `btc_price`, `price_usd` — skewed 
-  distributions and causal missingness make imputation unreliable
+- Listwise deletion for `duration`, `btc_price`, `price_usd` - skewed 
+  distributions make imputation unreliable and lower proportions of missingness mean data loss is not significant
 - Median imputation for `rating`, `teamsize`, `distributed_in_ico`, 
   `log_token_for_sale` as higher proportions of missingess and missingness consistent with MCAR
 - Before/after distribution comparison to verify imputation did not introduce bias
 
 **2.4 Exploratory Relationship Analysis**
 - Correlation matrix of continuous predictors (max |r| = 0.33, no multicollinearity)
-- Boxplots of continuous predictors by ICO outcome
-- Stacked barplots of binary predictors by ICO outcome
+- Boxplots of continuous predictors by ICO outcome - `rating`, `teamsize` and `duration exhibit strongest association with `goal`
+- Stacked barplots of binary predictors by ICO outcome - URL indicator variables show relationship with `goal` indicating transparency may be significant in determining the outcome of an ICO
 
 Final cleaned dataset: **4,475 rows × 19 predictor variables**
 
@@ -73,7 +73,7 @@ Final evaluation on a held-out test set (80/20 split, stratified by outcome).
 | Decision Tree | C5.0 with adaptive boosting | Number of boosting trials (1–20) |
 | Random Forest | `randomForest` | Number of trees (50–500) |
 | SVM | `ksvm` | Cost C (0.01–10) × kernel (linear, RBF, polynomial) |
-| KNN | `knn` | Number of neighbours k (1–121) |
+| KNN | `knn` | Number of neighbours K (1–121) |
 
 ### 4. Evaluation
 - Accuracy, Precision, Recall, F1 score on held-out test set
